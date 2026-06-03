@@ -9,8 +9,9 @@
 # } 
 
 module "sg" {
+  count = length(var.sg_name)
   source      = "git::https://github.com/Deepthi-123456789/terrafrom-aws-sg-86.git"
-  name        = "mongodb"
+  sg_name     = var.sg_name[count.index]
   project     = var.project
   environment = var.environment
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
