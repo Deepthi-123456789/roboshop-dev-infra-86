@@ -7,6 +7,6 @@ variable "environment" {
 }
 
 variable sg_name {
-    default = ["mongodb","mysql","rabbitmq","redis","catalogue","user","cart","shipping","payment","frontend","bastion","frontend_lb"]
+    default = ["mongodb","mysql","rabbitmq","redis","catalogue","user","cart","shipping","payment","frontend","bastion","frontend_lb","backend_lb"]
 }
 
