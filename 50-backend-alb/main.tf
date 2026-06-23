@@ -1,5 +1,5 @@
 resource "aws_lb" "backend_alb" {
-  name               = "${local.common_name_suffix}-backend-alb" # roboshop-dev-backend-alb
+  name               = "${local.common_name}-backend-alb" # roboshop-dev-backend-alb
   internal           = true
   load_balancer_type = "application"
   security_groups    = [local.backend_alb_sg_id]
@@ -10,7 +10,7 @@ resource "aws_lb" "backend_alb" {
 
   tags = {
 
-    Nmae = "${local.common_name_suffix}-backend-alb"
+    Name = "${local.common_name}-backend-alb"
     project = var.project
     environment = var.environment
     Terraform = true
